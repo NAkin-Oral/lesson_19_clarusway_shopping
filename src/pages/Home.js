@@ -5,10 +5,12 @@ import Header from '../components/header/Header';
 import Menus from '../components/menus/Menus';
 import data from '../helper/data';
 
-const allCategories = ['all', ...new Set(data.map(item => item.category.name))];
-
 const Home = () => {
   const [menuItems, setMenuItems] = useState(data);
+  const allCategories = [
+    'all',
+    ...new Set(data.map(item => item.category.name)),
+  ];
   const handleClick = categoryItem => {
     if (categoryItem === 'all') {
       setMenuItems(data);

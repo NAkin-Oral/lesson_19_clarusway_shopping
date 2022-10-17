@@ -1,11 +1,12 @@
 .main-container {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   margin-top: 4rem;
   padding: 0 8rem;
-  /* justify-content: center; */
+  justify-content: center;
   gap: 2.5rem;
+  flex-wrap: wrap;
 }
 .menu-container {
   display: flex;
