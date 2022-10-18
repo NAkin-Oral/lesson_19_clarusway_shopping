@@ -1,0 +1,15 @@
+.search-box {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  padding: 0.5rem;
+  line-height: 1.5rem;
+  width: 10rem;
+}

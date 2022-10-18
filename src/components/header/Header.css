@@ -1,18 +1,18 @@
-.header-coontainer {
+.header-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin: 2rem;
 }
-.header-coontainer h1 {
+.header-container h1 {
   text-align: center;
   font-size: 2.5rem;
   margin: 1rem 2rem;
   color: var(--color-1);
 }
 
-.header-coontainer .underline {
+.header-container .underline {
   width: 5rem;
   height: 0.2rem;
   background-color: var(--color-2);
