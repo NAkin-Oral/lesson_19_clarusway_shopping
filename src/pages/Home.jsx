@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Categories from '../components/categories/Categories';
 import Header from '../components/header/Header';
-import Menus from '../components/menus/Menus';
+import Menus from '../components/menus/Menus.jsx';
 import Range from '../components/range/Range';
 import SearchBox from '../components/searchbox/SearchBox';
 import data from '../helper/data';
