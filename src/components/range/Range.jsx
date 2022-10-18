@@ -8,14 +8,17 @@ const Range = ({
   priceFilter,
   maxPrice,
   minPrice,
+  valueMax,
+  setValueMax,
+  valueMin,
+  setValueMin,
 }) => {
-  const [value, setValue] = useState(maxPriceTag);
   return (
     <div className="range">
       <label>Choose a max price:${maxPrice}</label>
       <input
         onChange={e => {
-          setValue(e.target.value);
+          setValueMax(e.target.value);
           setMaxPrice(e.target.value);
           priceFilter();
         }}
@@ -23,7 +26,7 @@ const Range = ({
         min="0"
         max={maxPriceTag}
         step="1"
-        value={value}
+        value={valueMax}
       />
       <label>Choose a min price:${minPrice}</label>
       <input
@@ -31,7 +34,9 @@ const Range = ({
         min="0"
         max={maxPriceTag}
         step="1"
+        value={valueMin}
         onChange={e => {
+          setValueMin(e.target.value);
           setMinPrice(e.target.value);
           priceFilter();
         }}

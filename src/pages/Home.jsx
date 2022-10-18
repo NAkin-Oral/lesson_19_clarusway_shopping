@@ -15,11 +15,14 @@ const Home = () => {
   }, 0);
   const [maxPrice, setMaxPrice] = useState(maxPriceTag);
   const [minPrice, setMinPrice] = useState(0);
-
+  const [valueMax, setValueMax] = useState(maxPriceTag);
+  const [valueMin, setValueMin] = useState(0);
   const onSearchChange = e => {
     if (categorySearch === 'all') {
       const filtred = data.filter(item => {
-        return item.title.toLocaleLowerCase().includes(e.target.value);
+        return item.title
+          .toLocaleLowerCase()
+          .includes(e.target.value.toLocaleLowerCase());
       });
       setMenuItems(filtred);
     } else {
@@ -68,12 +71,20 @@ const Home = () => {
     if (categoryName === 'all') {
       setMenuItems(data);
       setCategorySearch('all');
+      setMaxPrice(maxPriceTag);
+      setMinPrice(0);
+      setValueMax(maxPriceTag);
+      setValueMin(0);
     } else {
       const filtred = data.filter(item => {
         return item.category.name === categoryName;
       });
       setMenuItems(filtred);
       setCategorySearch(categoryName);
+      setMaxPrice(maxPriceTag);
+      setMinPrice(0);
+      setValueMax(maxPriceTag);
+      setValueMin(0);
     }
   };
 
@@ -89,6 +100,10 @@ const Home = () => {
         priceFilter={priceFilter}
         maxPrice={maxPrice}
         minPrice={minPrice}
+        valueMax={valueMax}
+        setValueMax={setValueMax}
+        valueMin={valueMin}
+        setValueMin={setValueMin}
       />
       <Menus menuItems={menuItems} />
     </div>
